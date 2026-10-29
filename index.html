@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#222831" />
+    <meta
+      name="description"
+      content="Mritunjay Saini — Class 10 student, creative developer, robotics & IoT enthusiast. Interactive 3D WebGL portfolio."
+    />
+    <title>Mritunjay Saini — 3D Developer & Robotics Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <!-- Fixed Navigation Bar -->
+      <header class="topbar">
+        <a class="brand" href="#home" aria-label="Mritunjay Home">
+          <img
+            class="brand-avatar"
+            src="/assets/about-photo.png"
+            alt="Mritunjay Saini"
+            onerror="this.src='/assets/about-photo.png'"
+          />
+          <div class="brand-text">
+            <span class="brand-name">MRITUNJAY</span>
+            <span class="brand-sub">ROBOTICS • IoT • CODE</span>
+          </div>
+        </a>
+
+        <nav id="main-nav" aria-label="Main navigation">
+          <a href="#home" class="active">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#capabilities">Capabilities</a>
+          <a href="#journey">Earth & Monuments</a>
+          <a href="#github">GitHub City</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="topbar-actions">
+          <a href="#contact" class="btn primary small header-cta">Connect</a>
+          <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            ☰
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <!-- Hero Section: Prominent 3D Voxel Minecraft Avatar & Real Portrait -->
+        <section id="home" class="hero section">
+          <div class="hero-stage">
+            <canvas id="avatar-canvas" aria-label="Interactive 3D Minecraft Voxel Avatar of Mritunjay"></canvas>
+
+            <!-- Real Life Portrait Floating Card -->
+            <div class="hero-portrait-badge" id="hero-portrait-card">
+              <img
+                src="/assets/about-photo.png"
+                alt="Mritunjay Saini Real Life Portrait"
+                class="badge-thumb"
+                onerror="this.src='/assets/about-photo.png'"
+              />
+              <div class="badge-text">
+                <strong>Mritunjay Saini</strong>
+                <span>india</span>
+              </div>
+            </div>
+
+            <!-- Live HUD Overlays -->
+            <div class="stage-hud top-hud">
+              <div class="status-indicator">
+                <span class="hud-blink-dot green"></span>
+                <span>Online</span>
+              </div>
+              <div class="expression-switcher">
+                <span class="outfit-label">EXPRESSION:</span>
+                <button class="outfit-btn active" id="expr-normal-btn">Normal</button>
+                <button class="outfit-btn" id="expr-smile-btn">Smile</button>
+                <button class="outfit-btn" id="expr-happy-btn">Happy</button>
+                <button class="outfit-btn" id="expr-serious-btn">Serious</button>
+              </div>
+            </div>
+
+            <!-- Accessible Hotspot Shortcuts -->
+           <!-- <div class="hotspot-dock">
+              <span class="hotspot-dock-label">HOTSPOT SHORTCUTS:</span>
+              <button class="hotspot-pill" data-hotspot="head" title="Education">
+                <span class="pill-icon">🎓</span> Head: Education
+              </button>
+              <button class="hotspot-pill" data-hotspot="eyes" title="Camera Interface">
+                <span class="pill-icon">👁️</span> Eyes: Camera
+              </button>
+              <button class="hotspot-pill" data-hotspot="mouth" title="Voice Greeting">
+                <span class="pill-icon">💬</span> Mouth: Speak
+              </button>
+              <button class="hotspot-pill" data-hotspot="hand" title="Wave Hello">
+                <span class="pill-icon">👋</span> Hand: Wave
+              </button>
+              <button class="hotspot-pill" data-hotspot="chest" title="Contact & Socials">
+                <span class="pill-icon">📬</span> Chest: Contact
+              </button>
+            </div>
+
+            <div id="avatar-tooltip" class="avatar-tooltip" role="tooltip">Hover any body part to interact</div>
+
+            <div class="stage-caption">
+              <span>MOUSE TRACKING ACTIVE • 60 FPS</span>
+              <span>CLICK HEAD • EYES • MOUTH • CHEST • HAND</span>
+            </div>
+          </div>-->
+
+          <div class="scroll-cue">
+            <span></span>
+            <small>EXPLORE PORTFOLIO SCROLL ↓</small>
+          </div>
+        </section>
+
+        <!-- About Section: Prominently Featuring Mritunjay Saini's Real Portrait -->
+        <section id="about" class="section content-section">
+          <div class="section-heading reveal">
+            <p class="eyebrow">01 / ARCHITECTURE & PERSON</p>
+            <h2>The Person Behind<br /><span>The Projects.</span></h2>
+            <p class="section-intro">
+              I am a Class 10 student passionate about creative coding, embedded electronics, robotics, and designing practical, sensor-driven systems that solve real problems.
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <!-- Mritunjay Saini Real-Life Portrait Card -->
+            <div class="about-portrait-card reveal">
+              <div class="portrait-photo-frame">
+                <img
+                  src="/assets/about-photo.png"
+                  alt="Mritunjay Saini portrait in formal suit"
+                  class="portrait-main-img"
+                  onerror="this.src='/assets/about-photo.png'"
+                />
+                <div class="portrait-badge">
+                  <span>MRITUNJAY SAINI • CLASS 10</span>
+                </div>
+              </div>
+              <div class="portrait-meta">
+                <strong>Mritunjay Saini</strong>
+                <span>Class 10 Student • Robotics & IoT Developer</span>
+                <span class="location-tag">📍 India</span>
+                <p class="portrait-caption">
+                 
+                </p>
+              </div>
+            </div>
+
+            <div class="about-bio-column reveal">
+              <h3>Curious by nature.<br />Builder by choice.</h3>
+              <p>
+                My journey began with curiosity about how software interacts with the physical world. Rather than only studying theoretical concepts, I learn by building: soldering circuits, writing non-blocking C++ for microcontrollers, calibrating ultrasonic sensors, and creating 3D WebGL interfaces.
+              </p>
+              <p>
+                Whether it's an ultrasonic radar sweep plotting distance targets or a smart automating soil irrigation, I focus on understanding every layer from resistor to render loop.
+              </p>
+
+              <div class="about-stats-row">
+                <div class="stat-box">
+                  <strong>10th</strong>
+                  <span>Current Class</span>
+                </div>
+                <div class="stat-box">
+                  <strong>14+</strong>
+                  <span>Interactive Builds</span>
+                </div>
+                <div class="stat-box">
+                  <strong>IoT & 3D</strong>
+                  <span>Core Focus</span>
+                </div>
+                <div class="stat-box">
+                  <strong>96%</strong>
+                  <span>Hands-on Code</span>
+                </div>
+              </div>
+
+              <!-- Animated Neural Brain Core Visualizer -->
+              <div id="brain-visual-container" class="brain-host"></div>
+
+              <!-- Verified Education Card -->
+              <div class="education-card" id="education-card">
+                <span class="education-icon">🎓</span>
+                <div class="education-content">
+                  <div class="education-header">
+                    <strong>Secondary Education (Class 10)</strong>
+                    <span class="education-year">2026 Active</span>
+                  </div>
+                  <p>
+                    Currently pursuing Class 10 secondary school curriculum. Concurrently mastering algorithms, C/C++, Python, Arduino microcontroller programming, and WebGL frontend development through self-directed project engineering.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Interactive 3D Skills Section -->
+        <section id="skills" class="section content-section">
+          <div class="section-heading reveal">
+            <p class="eyebrow">02 / TECHNICAL ARSENAL</p>
+            <h2>Skills &<br /><span>Technologies.</span></h2>
+            <p class="section-intro">
+              Explore the 3D celestial constellation below. 
+            </p>
+          </div>
+
+          <div class="skills-stage-wrapper reveal">
+            <canvas id="skills-canvas" aria-label="Interactive 3D skills constellation"></canvas>
+            <div class="skills-hud-bar">
+              <span class="hud-blink-dot cyan"></span>
+              <span> SKILL FIELD •</span>
+            </div>
+            <div id="skills-tooltip" class="skills-tooltip" role="tooltip"></div>
+          </div>
+
+          <!-- Skill Category Tags -->
+          <div class="skills-tags-grid reveal" id="skills-tags-container"></div>
+        </section>
+
+        <!-- Projects Section (All 8 Detailed Interactive Builds) -->
+        <section id="projects" class="section content-section">
+          <div class="section-heading reveal">
+            <p class="eyebrow">03 / SELECTED ENGINEERING BUILDS</p>
+            <h2>Interactive prototypes &<br /><span>embedded experiments.</span></h2>
+            <p class="section-intro">
+Real life problem solving prototypes. These are complety explained and also open source.            </p>
+          </div>
+
+          <div class="projects-grid" id="projects-grid"></div>
+        </section>
+
+        <!-- Capabilities (What I Can Do) -->
+        <section id="capabilities" class="section content-section">
+          <div class="section-heading reveal">
+            <p class="eyebrow">04 / CORE CAPABILITIES</p>
+            <h2>What I bring<br /><span>to every project.</span></h2>
+            <p class="section-intro">
+              From low-level microcontroller firmware to high-performance 3D web visualizations, here are the capabilities and disciplines I practice.
+            </p>
+          </div>
+
+          <div class="capabilities-grid" id="capabilities-grid"></div>
+        </section>
+
+        <!-- Journey Section (Realistic 3D Earth Globe with Correctly Placed Monuments) -->
+        <section id="journey" class="section content-section">
+          <div class="section-heading reveal">
+            <p class="eyebrow">05 / REALISTIC 3D EARTH GLOBE</p>
+            <h2>World Monuments<br /><span></span></h2>
+            <p class="section-intro">
+              Explore Earth`s Monuments on my porfolio that show how i can go abrode. 
+            </p>
+          </div>
+
+          <div class="earth-full-stage reveal">
+            <canvas id="world-canvas" aria-label=""></canvas>
+
+            <!-- Quick Focus Monument Controls -->
+            <div class="earth-monument-pills">
+              <button class="monument-pill-btn active" data-monument="taj-mahal">
+                📍 Taj Mahal
+              </button>
+              <button class="monument-pill-btn" data-monument="pyramids">
+                📍 Pyramids of Giza
+              </button>
+              <button class="monument-pill-btn" data-monument="eiffel">
+                📍 Eiffel Tower
+              </button>
+              <button class="monument-pill-btn" data-monument="liberty">
+                📍 Statue of Liberty
+              </button>
+              <button class="monument-pill-btn" data-monument="great-wall">
+                📍 Great Wall 
+              </button>
+            </div>
+
+            <div class="world-controls">
+              <button id="world-zoom-in" aria-label="Zoom in">➕</button>
+              <button id="world-zoom-out" aria-label="Zoom out">➖</button>
+              <button id="world-reset" class="reset-btn">Reset</button>
+            </div>
+
+            <div class="world-legend">
+              <span></span>
+              <small></small>
+            </div>
+
+            <div id="monument-tooltip" class="monument-hud-tooltip" role="tooltip"></div>
+          </div>
+        </section>
+
+        <!-- GitHub Section (3D Isometric Contribution City) -->
+        <section id="github" class="section content-section">
+          <div class="section-heading reveal">
+            <p class="eyebrow">06 / 3D Contribution GITHUB CITY</p>
+            <h2>Contributions<br /><span>in GitHub</span></h2>
+            <p class="section-intro">
+              Every building represents contribution in GitHub.
+            </p>
+          </div>
+
+          <div id="github-section-container" class="reveal"></div>
+        </section>
+
+        <!-- Contact Section with 3D Beating WebGL Heart -->
+        <section id="contact" class="section content-section">
+          <div class="section-heading reveal">
+            <p class="eyebrow">07 / TRANSMISSION & CHANNELS</p>
+            <h2>Let's build something<br /><span>together.</span></h2>
+            <p class="section-intro">
+              Reach out for robotics discussions, creative coding collaborations, or science exhibition feedback.
+            </p>
+          </div>
+
+          <div class="contact-3d-wrapper reveal">
+            <!-- 3D Interactive WebGL Heart Stage -->
+            <div class="heart-3d-stage">
+              <canvas id="heart-3d-canvas" aria-label="Interactive 3D Beating WebGL Heart"></canvas>
+              <div class="heart-3d-hud">
+                <span class="hud-blink-dot purple"></span>
+                <span> </span>
+              </div>
+            </div>
+
+            <!-- Direct Contact Methods Card -->
+            <div class="contact-direct-card">
+              <h3>Connect Directly with Mritunjay</h3>
+              <p>
+                Interested in physical computing prototypes, smart agriculture, sonar radar systems, or creative web engineering? Let's connect directly.
+              </p>
+
+              <div class="direct-contact-actions">
+                <a href="mailto:mritunjaysaini20@gmail.com?subject=Portfolio%20Inquiry" class="btn primary">
+                  <span>📧 Email Mritunjay Saini</span>
+                </a>
+                <a href="https://github.com/mritunjay20" target="_blank" rel="noopener noreferrer" class="btn ghost">
+                  <span> GitHub Profile ↗</span>
+                </a>
+              </div>
+
+              <div class="contact-notes">
+                <span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="socials-heading reveal">
+            <h3>Verified Social Channels</h3>
+            <p>Connect across the digital web<code>.</code></p>
+          </div>
+
+          <div class="socials-grid reveal" id="socials-grid"></div>
+        </section>
+      </main>
+
+      <!-- Footer with Signature -->
+      <footer class="footer">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <img class="footer-avatar" src="/assets/about-photo.png" alt="Mritunjay" onerror="this.src='/assets/about-photo.png'" />
+            <div>
+              <strong>Mritunjay Saini</strong>
+              <span>Building ideas into real things with curiosity, code, and electronics.</span>
+            </div>
+          </div>
+
+          <div class="footer-signature-wrapper">
+            <span class="signature-tag">AUTHENTIC SIGNATURE REFERENCE</span>
+            <div class="signature-display">
+              <img
+                src="/assets/signature.png"
+                alt="Mritunjay Saini handwritten signature"
+                class="signature-img"
+                onerror="this.src='/assets/signature-reference.jpg'"
+              />
+              <span class="signature-printed">Mritunjay Saini</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© <span id="current-year"></span> Mritunjay Saini. All rights reserved.</span>
+          <span>CLASS 10 DEVELOPER • ROBOTICS & IoT PROTOTYPES</span>
+          <a href="#home" class="back-to-top">BACK TO TOP ↑</a>
+        </div>
+      </footer>
+
+      <!-- Modals and Toast Containers -->
+      <div id="toast" role="status" aria-live="polite"></div>
+      <div id="skill-detail-modal" class="detail-modal-backdrop"></div>
+      <div id="project-modal" class="project-modal-backdrop"></div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
